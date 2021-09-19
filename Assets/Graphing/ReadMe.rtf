@@ -1,0 +1,96 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf400
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red136\green138\blue133;\red136\green138\blue133;}
+{\*\expandedcolortbl;;\csgenericrgb\c53333\c54118\c52157;\csgenericrgb\c53333\c54118\c52157;}
+\margl1440\margr1440\vieww10560\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 /******************************************************/\
+\cf3 \
+\pard\pardeftab720\partightenfactor0
+\cf3  [VENN INTERACTIVE GRAPHING SUITE v1.0 \cf2 README\cf3 ]\uc0\u8232   Created by Samson Jinks\u8232   Copyright (\'a9) 2019 Venn Interactive Incorporated, LLC\
+\
+/******************************************************/\
+\
+Thank you for purchasing Stupid Simple Graphs 2D by Venn Interactive! \
+\
+Please see below for instructions on using the basic functions of our graphing suite. \
+\
+Much of this information is available in tooltips and comments in the scripts that make up this graphing suite, with example graph prefabs already built in Graphing > Examples > ExampleScene. You can also find individual graph prefabs for in Graphing > Prefabs > Graphs.\
+\
+If you have further questions, feel free to leave a comment on our store page and we\'92ll get back to you as soon as possible! Happy graphing!\
+\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 /******************************************************/\
+				GRAPHING FUNCTIONS\cf3 \uc0\u8232 \cf2 /******************************************************/\
+\
+>IMPORTANT< You will ALWAYS need to call SetAxisTitleAndBounds before calling SetUpGraphViaValues or SetUpGraphViaMultipleValueSets. See example script GraphingSuite for direct use of all of these functions. \
+\
+\
+\
+-SetAxisTitlesAndBounds-\
+\
+>Parameters: string xAxis, string yAxis\
+\
+>Summary: This is used for initial setup of the graph itself. It saves the height and width of the boundaries provided, as well as setting the name for your x and y axis. \
+\
+>Instructions: Input the name of your x and y axis, and ensure that the reference GraphBounds has been set on your graph.\
+\
+\
+\
+-SetupGraphViaValues-\
+\
+>Parameters: string[] xVals_, float[] yVals_, string yValueLabel_\
+\
+>Summary: This is used for setting up your graph itself with a preset group of x and y values. X values are always stored as strings, while Y values are always stored as floats. \
+\
+>Instructions: Input your xValues and yValues as arrays, in the order you want them to be associated. As you\'92d expect, xVals_[0] will be associated with yVals_[0], and so on. You can also list the label associated with your y values (such as \'93hrs\'94 or \'93lbs.\'94) to yValueLabel_ if desired.\
+\
+\
+\
+-SetUpGraphViaValues-\
+\
+>Parameters: string[] xVals_, float[] yVals_, Color[] displayColors_, string yValueLabel_\
+\
+>Summary: Same as above, but with the addition of color displays. Primarily used for pie charts and bar graphs, this allows you to indicate which representative section of the graph uses which color. \
+\
+>Instructions: As with xVals and yVals above, displayColors_[0] will always be associated with the xVal_[0] and yVal_[0] set. Enter your display colors and ensure they are equal in number to the x and y values being provided.\
+\
+\
+\
+-AddSingleXAndYValueToGraph-\
+\
+>Parameters: string xVal_, float yVal_, string yValueLabel_\
+\
+>Summary: This allows you to add a single set of x and y values to your graph after it\'92s been initially set up with the function SetupGraphViaValues. \
+\
+>Instructions: Set the xVal_ as your x value, yVal_ as your y value, and list the label associated with your y value (such as \'93hrs\'94 or \'93lbs.\'94) to yValueLabel_ if desired.\
+\
+\
+\
+-AddSingleXAndYValueToGraph-\
+\
+>Parameters: string xVal_, float yVal_, Color col_, string yValueLabel_\
+\
+>Summary: Same as above, but you are able to set the color of your individually added value. Used specifically with bar graphs and pie charts (color applied to individual bars and pie slices).\
+\
+>Instructions: Same as above, but be sure to set col_ as a different color than the one provided for the previous bar or pie chart slice.\
+\
+\
+\
+\
+-SetupGraphViaMultipleValueSets-\
+\
+>Parameters: string[] xVals_, List<float[]> yVals_, Color[] displayColors_, string yValueLabel_\
+\
+>Summary: This function is used when build line graphs or area graphs that have more than one line of data. \
+\
+>Instructions: When setting up these multi-line graphs or multi-set area charts, enter x values as you would normally, then enter in a List of float arrays that each contain the y Values associated with each line. Ex. If you have a 3 line graph, yVals_ should contain a float array of \{3, 2, 1\} at element 0, with each of those floats being the first y value of that individual line. \
+\
+\
+\
+\
+\
+}
